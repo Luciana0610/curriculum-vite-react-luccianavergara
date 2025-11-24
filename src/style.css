@@ -1,0 +1,158 @@
+/* src/styles.css */
+
+/* Reset ligero */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tipografía y fondo general */
+body {
+  font-family: 'Inter', "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(180deg, #fdf6f0 0%, #ffffff 100%);
+  color: #1f2937;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 24px;
+}
+
+/* Contenedor principal */
+#container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+}
+
+/* ================= Cabecera ================= */
+#cabecera {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: white;
+  padding: 32px 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 24px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+#cabecera h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+#cabecera p {
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+/* ================= Secciones ================= */
+.section {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fff0f5, #ffffff);
+  border-left: 6px solid #ff7eb3;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+}
+.section h2 {
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+  color: #ff4d6d;
+}
+.section p {
+  color: #374151;
+  font-size: 1rem;
+}
+
+/* ================= Perfil (Sobre mí) ================= */
+#about p {
+  text-align: justify;
+  white-space: pre-wrap;
+}
+
+/* ================= Habilidades / Educación ================= */
+#skills {
+  list-style: none;
+  padding-left: 0;
+}
+#skills li {
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  background: #fff5f8;
+  border-left: 4px solid #ff7eb3;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  color: #1f2937;
+  font-size: 0.97rem;
+}
+
+/* ================= Proyectos ================= */
+.project {
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  background: linear-gradient(180deg,#fff0f5,#ffeef8);
+  border: 1px solid rgba(255, 126, 179, 0.2);
+}
+.project strong {
+  display:block;
+  font-size: 1.05rem;
+  color: #e6007e;
+}
+.project em {
+  font-style: italic;
+  color: #6b7280;
+  font-size: 0.93rem;
+}
+
+/* ================= Badges de tecnologías ================= */
+.badges { margin-top: 14px; }
+.badge {
+  display: inline-block;
+  padding: 8px 14px;
+  margin: 6px 6px 6px 0;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  color: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+/* Colores por tecnología */
+.badge.js { background: #fcdc3b; color: #111; }
+.badge.html { background: #ff5722; }
+.badge.css { background: #2196f3; }
+.badge.git { background: #f14e32; }
+.badge.github { background: #333; }
+.badge.vite { background: #646cff; }
+.badge.react { background: #61dafb; color: #111; }
+
+/* ================= Contacto ================= */
+#contact p { margin-bottom: 10px; }
+.contact-email {
+  display:inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #ffe6f0;
+  color: #e6007e;
+  font-weight: 700;
+}
+
+/* ================= Responsivo ================= */
+@media (max-width: 640px) {
+  #cabecera h1 { font-size: 1.6rem; }
+  #cabecera { padding: 24px; }
+  #container { padding: 16px; }
+  .section { padding: 16px; }
+  .project { padding: 12px; }
+  .badge { padding: 6px 10px; font-size: 0.8rem; }
+}

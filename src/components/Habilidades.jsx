@@ -30,15 +30,16 @@ function Habilidades() {
   ];
 
   return (
-    <div>
-      <ul style={{ listStyleType: "square", lineHeight: "1.8" }}>
+    <section className="section">
+      <h2>Educación</h2>
+      <ul id="skills">
         {educacion.map((edu, index) => (
           <li key={index}>
             <strong>{edu.curso}</strong> - {edu.institucion} ({edu.año})
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 }
 
