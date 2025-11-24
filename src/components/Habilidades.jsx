@@ -1,4 +1,4 @@
-export default function Skills() {
+export default function Habilidades() {
   const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Git', 'Vite'];
   return (
     <section className='section skills'>

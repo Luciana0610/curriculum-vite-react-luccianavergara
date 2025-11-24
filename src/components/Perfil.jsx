@@ -1,4 +1,4 @@
-export default function About() {
+export default function Perfil() {
   return (
     <section className='section about'>
       <h2>Sobre mí</h2>
