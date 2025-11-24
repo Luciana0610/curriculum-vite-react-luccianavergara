@@ -1,7 +1,7 @@
 # Mi-cv-react, luciana vergara
 ![alt text](image.png)
-![alt text](<Captura de pantalla 2025-11-24 110509.png>)
-![alt text](image-3.png)
+![alt text](<Captura de pantalla 2025-11-24 110509-1.png>)
+![alt text](<Captura de pantalla 2025-11-24 110526.png>)
 # commits 
 ![alt text](<Captura de pantalla 2025-11-24 080500.png>)
 # instruccciones para ejecutar el proyecto
