@@ -10,4 +10,5 @@ export default function Habilidades() {
       </ul>
     </section>
   );
+  
 }
