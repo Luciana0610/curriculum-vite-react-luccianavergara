@@ -1,9 +1,9 @@
-// Cabecera.jsx
-export default function Cabecera() {
+export default function CabeceraCV({ nombre, cargo, ciudad, contacto }) {
   return (
-    <header id="cabecera">
-      <h1>Lucciana Vergara</h1>
-      <p>Desarrolladora Front-End | Estudiante de Tecnología en Sistemas, Analista</p>
+    <header>
+      <h1>{nombre}</h1>
+      <p>{cargo} — {ciudad}</p>
+      <p>Contacto: {contacto}</p>
     </header>
   );
 }
