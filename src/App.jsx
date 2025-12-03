@@ -1,38 +1,64 @@
-import { useState } from 'react';
-import './style.css';
-import Cabecera from './components/Cabecera.jsx';
-import Perfil from './components/Perfil.jsx';
-import Habilidades from './components/Habilidades.jsx';
-import Contacto from './components/Contacto.jsx';
-import Proyectos from './components/Proyectos.jsx';
-import StackTecnologias from './components/StackTecnologias.jsx';
+// src/App.jsx
+import React, { useState } from "react";
+import {
+  initialTecnologias,
+  initialHabilidades,
+  perfil
+} from "./data/data.js";
 
-import { datosPersonales, perfil, experiencias, estudios } from "./data";
+import ToggleHabilidades from "./components/ToggleHabilidades";
+import FormularioTecnologia from "./components/FormularioTecnologia";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // Estado dinámico del stack
+  const [tecnologias, setTecnologias] = useState(initialTecnologias);
+
+  // Estado para mostrar/ocultar habilidades
+  const [mostrarHabilidades, setMostrarHabilidades] = useState(false);
+
+  // Callback para agregar tecnologías
+  function agregarTecnologia(nueva) {
+    if (tecnologias.includes(nueva)) return; // evita duplicados
+    setTecnologias(prev => [...prev, nueva]);
+  }
+
+  function toggleHabilidades() {
+    setMostrarHabilidades(prev => !prev);
+  }
 
   return (
-    <div id="container">
-      <>
-      <Contacto />
-      <StackTecnologias />
-      <Cabecera
-        nombre={datosPersonales.nombre}
-        cargo={datosPersonales.cargo}
-        ciudad={datosPersonales.ciudad}
-        contacto={datosPersonales.contacto}
-      />
+    <div>
+      <header>
+        <h1>{perfil.nombre}</h1>
+        <h2>{perfil.titulo}</h2>
+        <p>{perfil.descripcion}</p>
+      </header>
 
-      <Perfil resumen={perfil.resumen} />
+      <main>
+        {/* Sección de tecnologías */}
+        <section>
+          <h3>Stack de Tecnologías</h3>
+          <ul>
+            {tecnologias.map((t, i) => (
+              <li key={i}>{t}</li>
+            ))}
+          </ul>
 
-      <Proyectos lista={experiencias} />
+          <FormularioTecnologia agregarTecnologia={agregarTecnologia} />
+        </section>
 
-      <Habilidades estudios={estudios} />
-    </>
-
+        {/* Sección de habilidades (interactiva) */}
+        <section>
+          <ToggleHabilidades
+            visible={mostrarHabilidades}
+            onToggle={toggleHabilidades}
+            habilidades={initialHabilidades}
+          />
+        </section>
+      </main>
     </div>
   );
 }
 
 export default App;
+
